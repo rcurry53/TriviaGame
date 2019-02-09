@@ -10,10 +10,28 @@
     <script src="app.js"></script>
 </head>
 <body>
-    <div class="quiz">
-		<h1>NBA Trivia Game</h1>
-			<p>Can you answer all the questions correctly about NBA Trivia?</p>
+        <div
+        class="container">
+        <div class="startScreen">
+            <h1>NBA Trivia</h1>
+        <br><br>
+            <input class=startButton type="button" value="start">
+        </div>
+        <div class="endScreen" style="display:none">
+            <h1>NBA Trivia</h1>
+            <br><br>
+            <h2> All Done!</h2>
+            <br>
+            <h3 id="correct"> Correct Answers: </h3>
+            <h3 id="incorrect"> Incorrect Answers: </h3>
+            <h3 id="unanswered"> Unanswered: </h3>
+            <input class="restartButton" type="button" value="Restart">
+        </div>
 
+        <div id="gamePlay" width="600" height="450" style="display:none; border:solid orange; padding:30px; margin:30px;">
+        
+			<p>Can you answer all the questions correctly about NBA Trivia?</p>
+            <div id="counter"></div>
             <h2 class="lead">1. Which franchise has won the most NBA Championships</h2>
             <div>
                 <input type="radio" id="laLakers" name="questionOne" value="laLakers" class="radioButton"><label for="laLakers">Minneapolis/Los Angeles Lakers</label>
@@ -64,7 +82,7 @@
                 <input type="radio" id="westbrook" name="questionFour" value="westbrook" class="radioButton"><label for="westbrook">Russell Westbrook</label>
             </div>
             <div>
-                <input type="radio" id="lebron" name="questionFour" value="lebron" class="radioButton"><label for="lebron">LeBron James</label>
+                <input type="radio" id="lbj" name="questionFour" value="lbj" class="radioButton"><label for="lbj">LeBron James</label>
             </div>
             <div>
                 <input type="radio" id="kd" name="questionFour" value="kd" class="radioButton"><label for="kd">Kevin Durant</label>
@@ -84,6 +102,10 @@
                 <input type="radio" id="sac" name="questionFive" value="sac" class="radioButton"><label for="sac">Sacramento Kings</label>
             </div>
 
-    <script src="app.js"></script>
+            <p><input type="button" value="Submit" id="Submit"></p>
+        </div>
+        </div>
+
+    <script src="/assets/javascript/app.js"></script>
 </body>
 </html>
